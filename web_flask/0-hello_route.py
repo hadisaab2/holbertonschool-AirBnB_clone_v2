@@ -1,20 +1,20 @@
 #!/usr/bin/python3
-"""Starts a Flask web application.
-
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /: Displays 'Hello HBNB!'
-"""
+"""import"""
 from flask import Flask
+"""conector"""
+
 
 app = Flask(__name__)
+"""decorate"""
 
 
-@app.route("/", strict_slashes=False)
-def hello_hbnb():
-    """Displays 'Hello HBNB!'"""
+@app.route('/', strict_slashes=False)
+def hello():
+    """return"""
     return "Hello HBNB!"
 
 
+"""entry point"""
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    """run flask"""
+    app.run(host="0.0.0.0", port=5000)
